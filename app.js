@@ -6,24 +6,18 @@ const divide = (a, b) => a / b;
 const operate = (operator, a, b) => {
   switch (operator) {
     case "+":
-      add(a, b);
-      break;
+      return add(a, b);
     case "-":
-      subtract(a, b);
-      break;
+      return subtract(a, b);
     case "*":
-      multiply(a, b);
-      break;
+      return multiply(a, b);
     case "/":
-      divide(a, b);
-      break;
+      return divide(a, b);
   }
 };
 
+let operator = prompt("Enter a mathematical operator");
 let a = Number(prompt("Enter first number"));
 let b = Number(prompt("Enter second number"));
 
-console.log(`${a} + ${b} = ${add(a, b)}`);
-console.log(`${a} - ${b} = ${subtract(a, b)}`);
-console.log(`${a} * ${b} = ${multiply(a, b)}`);
-console.log(`${a} / ${b} = ${divide(a, b)}`);
+console.log(`${a} + ${b} = ${operate(operator, a, b)}`);
